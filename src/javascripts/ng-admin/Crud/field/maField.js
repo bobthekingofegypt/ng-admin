@@ -70,6 +70,9 @@ export default function maField(FieldViewConfiguration, $compile) {
         {{ field.label() }}<span ng-if="field.validation().required">&nbsp;*</span>&nbsp;
     </label>
     ${fieldTemplate}
+    <div ng-messages="getInput().$error" class="field-errors" ng-if='getInput().$dirty'>
+        <div class="help-block" ng-repeat="m in field.validationMessages()" ng-message="{{m.key}}">{{m.message}}</div>
+    </div>
 </div>`;
 
             element.append(template);

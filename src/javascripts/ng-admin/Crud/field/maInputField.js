@@ -29,7 +29,7 @@ export default function maInputField() {
         },
         template:
 `<input type="{{ type || 'text' }}" ng-attr-step="{{ step }}" ng-model="value"
-    id="{{ name }}" name="{{ name }}" class="form-control"
+    id="{{ name }}" name="{{ name }}" class="form-control" ma-custom-field-validators
     ng-required="v.required" ng-minlength="v.minlength" ng-maxlength="v.maxlength" ng-pattern="v.pattern" />`
     };
 }

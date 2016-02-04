@@ -8,6 +8,7 @@ require('angular-ui-codemirror');
 require('nginflection');
 require('textangular');
 require('ui-select');
+require('angular-messages');
 
 require('../../node_modules/angular-numeraljs/dist/angular-numeraljs');
 require('angular-bootstrap/ui-bootstrap');
