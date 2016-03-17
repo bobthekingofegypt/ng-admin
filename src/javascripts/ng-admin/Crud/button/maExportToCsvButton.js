@@ -20,6 +20,7 @@ export default function maExportToCsvButton ($stateParams, Papa, notification, A
                 }
                 exportView.fields(exportFields);
                 exportView.filters(listView.filters());
+                exportView.name(listView.name()); // to enable reuse of sortField
             }
             scope.has_export = exportView.fields().length > 0;
             var formatEntry = entryFormatter.getFormatter(exportView.fields());
@@ -54,7 +55,7 @@ export default function maExportToCsvButton ($stateParams, Papa, notification, A
                         for (var i = entries.length - 1; i >= 0; i--) {
                             results[i] = formatEntry(entries[i]);
                         }
-                        var csv = Papa.unparse(results);
+                        var csv = Papa.unparse(results, listView.exportOptions());
                         var fakeLink = document.createElement('a');
                         document.body.appendChild(fakeLink);
 

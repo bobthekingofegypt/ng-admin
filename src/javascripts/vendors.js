@@ -11,8 +11,7 @@ require('ui-select');
 require('angular-messages');
 
 require('../../node_modules/angular-numeraljs/dist/angular-numeraljs');
-require('angular-bootstrap/ui-bootstrap');
-require('angular-bootstrap/ui-bootstrap-tpls');
+require('angular-ui-bootstrap/dist/ui-bootstrap-tpls');
 require('../../node_modules/ng-file-upload/dist/ng-file-upload');
 
 global._ = require('underscore');
