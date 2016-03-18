@@ -75,7 +75,6 @@
     "node": ">=4.2.0"
   },
   "scripts": {
-    "postinstall": "if [ -z \"$npm_config_production\" ]; then webdriver-manager update; fi",
     "test": "make test"
   },
   "dependencies": {
