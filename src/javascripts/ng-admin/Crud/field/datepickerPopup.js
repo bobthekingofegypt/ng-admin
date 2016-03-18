@@ -16,10 +16,10 @@ export default function datepickerPopup() {
         require: 'ngModel',
         link: function(scope, element, attr, controller) {
             // 'new Date' fallback
-            scope.value = scope.value instanceof Date ? scope.value:new Date(scope.value);
+            //scope.value = scope.value instanceof Date ? scope.value:new Date(scope.value);
 
             //remove the default formatter from the input directive to prevent conflict
-            controller.$formatters.shift();
+            //controller.$formatters.shift();
         }
     };
 }
