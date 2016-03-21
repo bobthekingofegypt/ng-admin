@@ -13,7 +13,8 @@ export default function maDateField() {
         link: function(scope, element) {
             var field = scope.field();
             scope.name = field.name();
-            scope.rawValue = scope.value;
+            scope.rawValue = scope.value instanceof Date ? 
+              scope.value : scope.value ? new Date(scope.value) : null;
             scope.$watch('rawValue', function(rawValue) {
                 scope.value = field.parse()(rawValue);
             });
